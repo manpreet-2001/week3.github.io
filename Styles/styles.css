@@ -1,6 +1,6 @@
 body {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background: #fff;
     color: #000;
@@ -28,88 +28,56 @@ a:active {
 }
 
 #navlist li {
-    display: inline;
-    list-style-type: circle;
+    display: inline-block; /* Changed from inline to inline-block for better control */
     padding-right: 20px;
     border-left: 1px solid #000;
     line-height: 1.1em;
     margin: 0 .5em 0 -.5em;
-    padding: 0 .5em 0 .5em;
+    padding: 0 .5em;
+    list-style: none; /* Removed circle style since it's not necessary */
+}
+
+.box, .nav, .left, .centre, .right, .lower_nav, .legal {
+    margin: 10px;
+    padding: 10px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
 }
 
 .box {
-    margin: 10px;
-    padding: 10px;
     background-color: #666;
-    border-width: 1px;
-    border-color: black;
-    border-style: solid;
     clear: both;
 }
 
-.nav {
-    margin: 10px;
-    padding: 10px;
+.nav, .lower_nav, .legal {
     background-color: #999;
-    border-width: 1px;
-    border-color: black;
-    border-style: solid;
+}
+
+.left, .centre, .right {
+    background-color: #CCC;
 }
 
 .left {
     width: 20%;
-    margin: 10px;
-    padding: 10px;
-    background-color: #CCC;
-    border-width: 1px;
-    border-color: black;
-    border-style: solid;
     float: left;
 }
 
 .centre {
     width: 47%;
-    margin: 10px;
-    padding: 10px;
-    background-color: #CCC;
-    border-width: 1px;
-    border-color: black;
-    border-style: solid;
     float: left;
 }
 
 .right {
     width: 20%;
-    margin: 10px;
-    padding: 10px;
-    background-color: #CCC;
-    border-width: 1px;
-    border-color: black;
-    border-style: solid;
     float: right;
 }
 
-.lower_nav {
-    margin: 10px;
-    padding: 10px;
-    background-color: #999;
-    border-width: 1px;
-    border-color: black;
-    border-style: solid;
+.lower_nav, .legal {
     clear: both;
 }
 
-.legal {
-    margin: 10px;
-    padding: 10px;
-    background-color: #999;
-    border-width: 1px;
-    border-color: black;
-    border-style: solid;
-    clear: both;
-}
-
-.deadnav{
-    color:#FFF;
-    background-color: #3CF
+.deadnav {
+    color: #FFF;
+    background-color: #3CF;
 }
